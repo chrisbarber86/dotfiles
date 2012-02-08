@@ -3,7 +3,7 @@
 
 set nocompatible                  " Must come first because it changes other options.
 
-silent! call pathogen#runtime_append_all_bundles()
+call pathogen#runtime_append_all_bundles()
 
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
@@ -50,7 +50,7 @@ set laststatus=2                  " Show the status line all the time
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
 " Or use vividchalk
-colorscheme topfunky-light
+colorscheme molokai " topfunky-light
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
