@@ -9,10 +9,10 @@ Usage
 Clone into ~/dotfiles/
 
 Symlink vim:
-  ln -nfs ~/dotfiles/ .vim
+	ln -nfs ~/dotfiles/ .vim
 
 Symlink .vimrc:
-  ln -nfs ~/dotfiles/vimrc .vimrc
+	ln -nfs ~/dotfiles/vimrc .vimrc
 
 Symlink .gvimrc:
-  ln -nfs ~/dotfiles/gvimrc .gvimrc
+	ln -nfs ~/dotfiles/gvimrc .gvimrc
