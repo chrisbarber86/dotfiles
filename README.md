@@ -21,3 +21,6 @@ Symlink .gvimrc:
 
 Symlink .bash_aliases
   ln -nfs ~/dotfiles/bash_aliases .bash_aliases
+
+Symlink .gitconfig
+  ln -nfs ~/dotfiles/gitconfig .gitconfig
