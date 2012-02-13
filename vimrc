@@ -13,7 +13,7 @@ runtime macros/matchit.vim        " Load the matchit plugin.
 "NERD TREE
 autocmd vimenter * NERDTree
 autocmd vimenter * if !argc() |  NERDTree | endif
-
+let NERDTreeShowHidden=1
 
 set mouse=a                       " Enable Mouse
 

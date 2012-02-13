@@ -24,3 +24,6 @@ Symlink .bash_aliases
 
 Symlink .gitconfig
   ln -nfs ~/dotfiles/gitconfig .gitconfig
+
+Symlink .gitignroe
+  ln -nfs ~/dotfiels/gitignore .gitignore
