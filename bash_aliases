@@ -24,6 +24,7 @@ alias go="git checkout "
 
 # Bundler
 alias b="bundle"
+alias be="bundle exec "
 
 # Rails
 alias ss='script/server'
