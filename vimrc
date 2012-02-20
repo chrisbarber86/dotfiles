@@ -22,6 +22,10 @@ set showmode                      " Display the mode you're in.
 
 set backspace=indent,eol,start    " Intuitive backspacing.
 
+
+"Set line endings to show as ¬ instead of $ when viewing in :set list mode
+set lcs=eol:¬
+
 set hidden                        " Handle multiple buffers better.
 
 set wildmenu                      " Enhanced command line completion.
@@ -45,7 +49,7 @@ set visualbell                    " No beeping.
 
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup                 " And again.
-set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
+set directory=$HOME/.vim/tmp      " Keep swap files in one location
 
 " UNCOMMENT TO USE
 set tabstop=2                    " Global tab width.
