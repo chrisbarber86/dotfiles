@@ -95,4 +95,15 @@ map <leader>tm :tabmove
 " For the MakeGreen plugin and Ruby RSpec. Uncomment to use.
 autocmd BufNewFile,BufRead *_spec.rb compiler rspec
 
+" Use Ack instead of Grep when available
+if executable("ack")
+  set grepprg=ack\ -H\ --nogroup\ --nocolor
+endif
 
+" Turn syntax highlighting on
+if (has("gui_running"))
+  syntax on
+  if has("gui_macvim")
+    set guifont=Menlo:h16
+  endif
+end
