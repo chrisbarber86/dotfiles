@@ -1,6 +1,6 @@
 [user]
-	name = Chris Barber
-	email = chris.barber@sage.com
+	name = 
+	email = 
 [core]
 	autocrlt = input
 	safecrlt = true
@@ -12,3 +12,5 @@
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
+[github]
+	user = chrisbarber86
