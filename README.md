@@ -27,3 +27,6 @@ Symlink .gitconfig
 
 Symlink .gitignore
   ln -nfs ~/dotfiles/gitignore .gitignore
+
+Symlink .gemrc
+  ln -nfs ~/dotfiles/gemrc .gemrc
