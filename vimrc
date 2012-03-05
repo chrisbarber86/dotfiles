@@ -22,10 +22,6 @@ set showmode                      " Display the mode you're in.
 
 set backspace=indent,eol,start    " Intuitive backspacing.
 
-
-"Set line endings to show as ¬ instead of $ when viewing in :set list mode
-set lcs=eol:¬
-
 set hidden                        " Handle multiple buffers better.
 
 set wildmenu                      " Enhanced command line completion.
@@ -55,6 +51,17 @@ set directory=$HOME/.vim/tmp      " Keep swap files in one location
 set tabstop=2                    " Global tab width.
 set shiftwidth=2                 " And again, related.
 set expandtab                    " Use spaces instead of tabs
+set cursorline
+set ai
+set ts=2
+set softtabstop=2
+
+set showmatch "show matching brackets
+set mat=5 "Bracket blinking
+set list
+
+"Set line endings to show as ¬ instead of $ when viewing in :set list mode
+set lcs=eol:¬
 
 set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
@@ -108,3 +115,6 @@ if (has("gui_running"))
     set guifont=Menlo:h16
   endif
 end
+
+"Platform .ui files
+au BufRead,BufNewFile *.ui set filetype=ruby
