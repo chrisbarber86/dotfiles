@@ -11,7 +11,8 @@ function take() { mkdir $1; cd $1; }
 alias tk="take"
 
 # bashrc & vimrc
-alias r1="source ~/.bash_aliases"
+alias pr="vim ~/.bash_aliases"
+alias rl="source ~/.bash_aliases"
 
 # Git
 alias g="git"
@@ -43,8 +44,12 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(parse_git_dirty))/"
 }
 
+CYAN="\[\033[0;36m\]"
+PURPLE="\[\033[0;35m\]"
 RED="\[\033[0;31m\]"
 YELLOW="\[\033[0;33m\]"
+BLUE="\[\033[0;34m\]"
+GREEN="\[\033[0;32m\]"
 NO_COLOUR="\[\033[0m\]"
 
 PS1="$RED\$(date +%H:%M) \w$YELLOW\$(parse_git_branch)\$ $NO_COLOUR"
