@@ -1,7 +1,8 @@
 # Bash Aliases File - Heavily based on same file github.com/damian/dotfiles/
 
 # Navigation
-alias ll="ls -al"
+alias ll="ls -l"
+alias lla="ls -la"
 alias ..="cd .."
 alias ...="cd ../.."
 alias dev="cd ~/development"
