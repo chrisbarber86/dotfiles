@@ -116,5 +116,7 @@ if (has("gui_running"))
   endif
 end
 
+nnoremap <silent> <C-n> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+
 "Platform .ui files
 au BufRead,BufNewFile *.ui set filetype=ruby

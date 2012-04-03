@@ -35,6 +35,9 @@ alias rr='rake routes'
 alias migrate='rake db:migrate'
 alias tlf='tail -f'
 
+# Evergreen
+alias evergreen="be rails s -p 4000"
+
 # Bash prompt
 
 function parse_git_dirty {
