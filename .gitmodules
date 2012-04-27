@@ -1,0 +1,51 @@
+[submodule "bundle/ack.vim"]
+  path = bundle/ack.vim
+  url = git://github.com/mileszs/ack.vim.git
+[submodule "bundle/mustache"]
+  path = bundle/mustache
+  url = git://github.com/juvenn/mustache.vim.git
+[submodule "bundle/nerdtree"]
+  path = bundle/nerdtree
+  url = git://github.com/scrooloose/nerdtree.git
+[submodule "bundle/snipmate.vim"]
+  path = bundle/snipmate.vim
+  url = git://github.com/msanders/snipmate.vim.git
+[submodule "bundle/vim-endwise"]
+  path = bundle/vim-endwise
+  url = git://github.com/tpope/vim-endwise.git
+[submodule "bundle/vim-fugitive"]
+  path = bundle/vim-fugitive
+  url = git://github.com/tpope/vim-fugitive.git
+[submodule "bundle/vim-git"]
+  path = bundle/vim-git
+  url = git://github.com/tpope/vim-git.git
+[submodule "bundle/vim-makegreen"]
+  path = bundle/vim-makegreen
+  url = git://github.com/reinh/vim-makegreen.git
+[submodule "bundle/vim-markdown"]
+  path = bundle/vim-markdown
+  url = git://github.com/tpope/vim-markdown.git
+[submodule "bundle/vim-peepopen"]
+  path = bundle/vim-peepopen
+  url = git://github.com/twe4ked/vim-peepopen.git
+[submodule "bundle/vim-ragtag"]
+  path = bundle/vim-ragtag
+  url = git://github.com/tpope/vim-ragtag.git
+[submodule "bundle/vim-rails"]
+  path = bundle/vim-rails
+  url = git://github.com/tpope/vim-rails.git
+[submodule "bundle/vim-rooter"]
+  path = bundle/vim-rooter
+  url = git://github.com/airblade/vim-rooter.git
+[submodule "bundle/vim-surround"]
+  path = bundle/vim-surround
+  url = git://github.com/tpope/vim-surround.git
+[submodule "bundle/vim-taglist"]
+  path = bundle/vim-taglist
+  url = git://github.com/vim-scripts/taglist.vim.git
+[submodule "bundle/vim-tcomment"]
+  path = bundle/vim-tcomment
+  url = git://github.com/tsaleh/vim-tcomment.git
+[submodule "bundle/vim-unimpaired"]
+  path = bundle/vim-unimpaired
+  url = git://github.com/tpope/vim-unimpaired.git
