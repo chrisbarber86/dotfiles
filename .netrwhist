@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/chris/Downloads/peepcode/vim1/peepcode-vim-code/tutorial-apache-files'
-let g:netrw_dirhist_2='/home/chris/Downloads/peepcode/vim1/peepcode-vim-code'
-let g:netrw_dirhist_3='/home/chris/Downloads/peepcode/vim1/peepcode-vim-code/tutorial-apache-files'
-let g:netrw_dirhist_4='/home/chris/development/doshbox'
-let g:netrw_dirhist_5='/home/chris/development/doshbox/app/views/doshbox/sales_types'
