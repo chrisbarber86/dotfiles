@@ -16,9 +16,6 @@ Symlink vim:
 Symlink .vimrc:
   ln -nfs ~/dotfiles/vimrc .vimrc
 
-Symlink .gvimrc:
-  ln -nfs ~/dotfiles/gvimrc .gvimrc
-
 Symlink .bash_aliases
   ln -nfs ~/dotfiles/bash_aliases .bash_aliases
 
@@ -30,3 +27,6 @@ Symlink .gitignore
 
 Symlink .gemrc
   ln -nfs ~/dotfiles/gemrc .gemrc
+
+Fetch submodules after cloning repo, in ~/dotfiles run:
+  git submodule update --init
