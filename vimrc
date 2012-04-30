@@ -72,7 +72,7 @@ set spelllang=en_gb
 " Or use vividchalk
 set t_Co=256
 "colorscheme molokai " topfunky-light
-colorscheme inkpot
+colorscheme vividchalk "inkpot
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
@@ -113,3 +113,7 @@ nnoremap <silent> <C-n> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 "Platform .ui files
 au BufRead,BufNewFile *.ui set filetype=ruby
+au BufNewFile,BufRead *.ctp set filetype=html
+au BufNewFile,BufRead Gemfile set filetype=ruby
+au BufNewFile,BufRead Rakefile set filetype=ruby
+au BufNewFile,BufRead Fudgefile set filetype=ruby
