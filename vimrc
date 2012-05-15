@@ -113,6 +113,7 @@ nnoremap <silent> <C-n> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 "Platform .ui files
 au BufRead,BufNewFile *.ui set filetype=ruby
+au BufRead,BufNewFile *.mustache set filetype=javascript
 au BufNewFile,BufRead *.ctp set filetype=html
 au BufNewFile,BufRead Gemfile set filetype=ruby
 au BufNewFile,BufRead Rakefile set filetype=ruby
