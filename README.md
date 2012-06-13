@@ -28,5 +28,8 @@ Symlink .gitignore
 Symlink .gemrc
   ln -nfs ~/dotfiles/gemrc .gemrc
 
+Symlink .tmux.conf
+  ln -nfs ~/dotfiles/tmux.conf .tmux.conf
+
 Fetch submodules after cloning repo, in ~/dotfiles run:
   git submodule update --init

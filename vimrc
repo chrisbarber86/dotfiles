@@ -85,6 +85,10 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
+" Paste toggle (,p)
+" set pastetoggle=<leader>p
+" map <leader>p :set invpaste paste?<CR>
+
 " Uncomment to use Jamis Buck's file opening plugin
 "map <Leader>t :FuzzyFinderTextMate<Enter>
 
