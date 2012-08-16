@@ -72,3 +72,12 @@ alias dfind="find . -name"
 
 # Open folder
 alias o="nautilus"
+
+# 256 Colour Stuff for Vim/ Tmux
+export TERM='screen-256color'
+
+#Editor set to vim
+export EDITOR=vim
+
+#Set proxy for selenium webdriver issue
+export no_proxy=127.0.0.1
