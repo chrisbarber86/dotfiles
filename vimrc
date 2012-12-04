@@ -62,6 +62,18 @@ set list
 "Set line endings to show as ¬ instead of $ when viewing in :set list mode
 set lcs=eol:¬
 
+" Highlight 80 character column
+highlight ColorColumn ctermbg=4
+set colorcolumn=80
+
+"highlight extra white space
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
 set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
 set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
@@ -88,6 +100,10 @@ map <leader>tm :tabmove
 " Paste toggle (,p)
 " set pastetoggle=<leader>p
 " map <leader>p :set invpaste paste?<CR>
+nmap <leader>pp :setlocal paste!<CR> :echo "Paste Mode ="&paste<CR>
+
+set wildmode=longest,list
+set wildmenu "enable bash <tab><tab> to list dir
 
 " Uncomment to use Jamis Buck's file opening plugin
 "map <Leader>t :FuzzyFinderTextMate<Enter>
