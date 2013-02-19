@@ -5,7 +5,10 @@ alias ll="ls -l"
 alias lla="ls -la"
 alias ..="cd .."
 alias ...="cd ../.."
-alias dev="cd ~/development"
+
+# dev function
+function dev() { cd ~/development/"$1"; }
+alias dev="dev"
 
 # mkdir and cd into it
 function take() { mkdir $1; cd $1; }
