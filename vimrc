@@ -15,6 +15,10 @@ autocmd vimenter * NERDTree
 autocmd vimenter * if !argc() |  NERDTree | endif
 let NERDTreeShowHidden=1
 
+"POWERLINE https://github.com/Lokaltog/vim-powerline
+let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+
 set mouse=a                       " Enable Mouse
 
 set showcmd                       " Display incomplete commands.
