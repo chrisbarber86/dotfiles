@@ -33,3 +33,7 @@ Symlink .tmux.conf
 
 Fetch submodules after cloning repo, in ~/dotfiles run:
   git submodule update --init
+
+###Vim Powerline Patched Fonts
+
+Download and install patched fonts from [here](https://gist.github.com/qrush/1595572/download) and use these fonts in your [terminal](http://www.iterm2.com/)
