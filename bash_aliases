@@ -84,3 +84,6 @@ export EDITOR=vim
 
 #Set proxy for selenium webdriver issue
 export no_proxy=127.0.0.1
+
+# Speed up Fudge Builds
+export DGC=true
