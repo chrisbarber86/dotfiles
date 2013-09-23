@@ -10,6 +10,7 @@
   st = status
   br = branch
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  graph = log --graph --oneline --all
   type = cat-file -t
   dump = cat-file -p
 [github]
