@@ -41,6 +41,9 @@ alias tlf='tail -f'
 # Evergreen
 alias evergreen="be rails s -p 4000"
 
+# Python SimpleHTTPServer
+alias simple="python -m SimpleHTTPServer"
+
 # Bash prompt
 
 function parse_git_dirty {
