@@ -16,6 +16,9 @@ Symlink vim:
 Symlink .vimrc:
   ln -nfs ~/dotfiles/vimrc .vimrc
 
+Symlink .vimrc.bundles:
+  ln -nfs ~/dotfiles/vimrc.bundles .vimrc.bundles
+
 Symlink .bash_aliases
   ln -nfs ~/dotfiles/bash_aliases .bash_aliases
 
@@ -31,8 +34,10 @@ Symlink .gemrc
 Symlink .tmux.conf
   ln -nfs ~/dotfiles/tmux.conf .tmux.conf
 
-Fetch submodules after cloning repo, in ~/dotfiles run:
-  git submodule update --init
+## Install all bundles using vundle:
+
+Open vim and run:
+```:BundleInstall```
 
 ###Vim Powerline Patched Fonts
 
