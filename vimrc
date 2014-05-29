@@ -2,6 +2,16 @@
 " Copy or symlink to ~/.vimrc or ~/_vimrc.
 set nocompatible                  " Must come first because it changes other options.
 
+" Configure Vundle
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Source Vundle bundles
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
+endif
+
 "Pathogen Bundles
 silent! call pathogen#runtime_append_all_bundles()
 

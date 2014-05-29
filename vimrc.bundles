@@ -1,0 +1,39 @@
+" Include Vundle!
+Bundle 'gmarik/vundle'
+" Powerline for vim
+Bundle 'Lokaltog/vim-powerline'
+" CoffeeScript syntax highlighting
+Bundle 'kchmck/vim-coffee-script'
+" Full path fuzzy file finder
+Bundle 'kien/ctrlp.vim'
+" Filesystem explorer
+Bundle 'scrooloose/nerdtree'
+" Auto end things like def, if, do etc
+Bundle 'tpope/vim-endwise'
+" Git commands in vim!
+Bundle 'tpope/vim-fugitive'
+" Syntax highlighting for git, gitcommit, etc
+Bundle 'tpope/vim-git'
+" Syntax highlighting for markdown
+Bundle 'tpope/vim-markdown'
+" Rails goodness for vim
+Bundle 'tpope/vim-rails'
+" Mappings for manipulcation of surroundings like quotes
+Bundle 'tpope/vim-surround'
+" Useful vim mappings
+Bundle 'tpope/vim-unimpaired'
+" Provides easy to use mappings for comments
+Bundle 'tomtom/tcomment_vim'
+" Tab completion
+Bundle 'ervandew/supertab'
+
+" Bundles I don't think I'm actually using:
+"
+" Bundle 'airblade/vim-rooter'
+" Bundle 'juvenn/mustache.vim'
+" Bundle 'mileszs/ack.vim'
+" Bundle 'msanders/snipmate.vim'
+" Bundle 'reinh/vim-makegreen'
+" Bundle 'tpope/vim-ragtag'
+" Bundle 'twe4ked/vim-peepopen' "This one seems to break my vim
+" Bundle 'vim-scripts/taglist.vim'
