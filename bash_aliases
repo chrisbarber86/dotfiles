@@ -26,6 +26,7 @@ alias gb="git branch "
 alias gc="git commit "
 alias gd="git diff "
 alias go="git checkout "
+alias undo="git reset --soft HEAD~1"
 
 # Bundler
 alias b="bundle"
