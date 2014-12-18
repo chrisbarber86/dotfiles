@@ -78,7 +78,7 @@ set lcs=eol:¬
 
 " Highlight 80 character column
 highlight ColorColumn ctermbg=4
-set colorcolumn=80
+set colorcolumn=100
 
 "highlight extra white space
 highlight ExtraWhitespace ctermbg=red guibg=red
