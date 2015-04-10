@@ -12,28 +12,28 @@ Then add symlinks in your ~/ directory
 
 ```bash
 # Symlink vim:
-ln -nfs ~/dotfiles/ .vim
+ln -nfs ~/dotfiles/ ~/.vim
 
 # Symlink .vimrc:
-ln -nfs ~/dotfiles/vimrc .vimrc
+ln -nfs ~/dotfiles/vimrc ~/.vimrc
 
 # Symlink .vimrc.bundles:
-ln -nfs ~/dotfiles/vimrc.bundles .vimrc.bundles
+ln -nfs ~/dotfiles/vimrc.bundles ~/.vimrc.bundles
 
 # Symlink .bash_aliases
-ln -nfs ~/dotfiles/bash_aliases .bash_aliases
+ln -nfs ~/dotfiles/bash_aliases ~/.bash_aliases
 
 # Symlink .gitconfig
-ln -nfs ~/dotfiles/gitconfig .gitconfig
+ln -nfs ~/dotfiles/gitconfig ~/.gitconfig
 
 # Symlink .gitignore
-ln -nfs ~/dotfiles/gitignore .gitignore
+ln -nfs ~/dotfiles/gitignore ~/.gitignore
 
 # Symlink .gemrc
-ln -nfs ~/dotfiles/gemrc .gemrc
+ln -nfs ~/dotfiles/gemrc ~/.gemrc
 
 # Symlink .tmux.conf
-ln -nfs ~/dotfiles/tmux.conf .tmux.conf
+ln -nfs ~/dotfiles/tmux.conf ~/.tmux.conf
 ```
 
 ## Install all bundles using vundle:
