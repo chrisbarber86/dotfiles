@@ -10,12 +10,7 @@ alias ...="cd ../.."
 function dev() { cd ~/development/"$1"; }
 alias dev="dev"
 
-# mkdir and cd into it
-function take() { mkdir $1; cd $1; }
-alias tk="take"
-
 # bashrc & vimrc
-alias pr="vim ~/.bash_aliases"
 alias rl="source ~/.bash_aliases"
 
 # Git
@@ -32,21 +27,13 @@ alias undo="git reset --soft HEAD~1"
 alias b="bundle"
 alias be="bundle exec "
 
-# Rails
-alias ss='script/server'
-alias sc='script/console'
-alias rr='rake routes'
-alias migrate='rake db:migrate'
-alias tlf='tail -f'
-
-# Evergreen
+# Evergreen - https://github.com/abepetrillo/evergreen
 alias evergreen="be rails s -p 4000"
 
 # Python SimpleHTTPServer
 alias simple="python -m SimpleHTTPServer"
 
 # Bash prompt
-
 function parse_git_dirty {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
 }
@@ -65,31 +52,16 @@ NO_COLOUR="\[\033[0m\]"
 
 PS1="$RED\$(date +%H:%M) \w$YELLOW\$(parse_git_branch)\$ $NO_COLOUR"
 
-# Edit bash_aliases
-alias pr="vim ~/.bash_aliases"
-
-# Edit vimconfig
-alias vr="vim ~/.vimrc"
-
-# Custom grep
-alias dgrep="grep -lir --exclude=\*.svn\* --exclude=\*.swp --exclude=\*.log"
-
-# Find all files below the current directory whose name contains
-alias dfind="find . -name"
-
-# Open folder
-alias o="nautilus"
-
 # 256 Colour Stuff for Vim/ Tmux
 export TERM='screen-256color'
 
-#Editor set to vim
+# Editor set to vim
 export EDITOR=vim
 
-#Set proxy for selenium webdriver issue
+# Set no_proxy to avoid issues with selenium webdriver
 export no_proxy=127.0.0.1
 
-# Speed up Fudge Builds
+# Speed up Builds in Ruby
 export DGC=true
 
 # GitHub Methods (https://gist.github.com/andrewjtait/9114245e92b84d69aa43#file-gistfile1-sh)
@@ -98,15 +70,15 @@ function github {
   url="$(git config --get remote.origin.url)"
   url=${url/git@github.com:/http://github.com/}
   url=${url/.git/}
- 
+
   if [[ $1 =~ "compare" ]]; then action="compare"
   elif [[ $1 =~ "pr" ]]; then action="pull"
   else action="tree"; fi
- 
+
   if [[ $2 != "" ]]; then base="$2..."
   else base=""; fi
- 
+
   url="${url}/${action}/${base}${branch}"
- 
+
   echo "Opening ${url} $(\open ${url})"
 }
