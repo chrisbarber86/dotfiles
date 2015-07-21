@@ -1,5 +1,5 @@
 " Include Vundle!
-Bundle 'gmarik/vundle'
+Bundle 'vundlevim/vundle.vim'
 " Powerline for vim
 Bundle 'Lokaltog/vim-powerline'
 " CoffeeScript syntax highlighting
@@ -26,6 +26,8 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'tomtom/tcomment_vim'
 " Tab completion
 Bundle 'ervandew/supertab'
+" Typescript syntax highlighting
+Bundle 'leafgarland/typescript-vim'
 
 " Bundles I don't think I'm actually using:
 "
