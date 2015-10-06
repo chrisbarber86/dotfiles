@@ -1,6 +1,3 @@
-[user]
-  name = Chris Barber 
-  email = chris.barber@sage.com 
 [core]
   autocrlt = input
   safecrlt = true
