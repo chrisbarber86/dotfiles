@@ -28,6 +28,10 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'ervandew/supertab'
 " Typescript syntax highlighting
 Bundle 'leafgarland/typescript-vim'
+" UltiSnips
+Bundle 'SirVer/ultisnips'
+" Snippets
+Bundle 'honza/vim-snippets'
 
 " Bundles I don't think I'm actually using:
 "
