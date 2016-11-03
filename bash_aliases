@@ -33,6 +33,18 @@ alias evergreen="be rails s -p 4000"
 # Python SimpleHTTPServer
 alias simple="python -m SimpleHTTPServer"
 
+# AWS Login
+alias awslogin="$(aws ecr get-login)"
+
+# Docker Toolbox Setup
+alias quickstart='sh /Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh'
+# eval "$(docker-machine env default)"
+alias docker_rmi='docker rmi -f $(docker images -q -a -f dangling=true)' # Remo$
+alias docker_rmc='docker rm $(docker ps -a -q)' # Remove all containers
+alias docker_rmv='docker volume rm $(docker volume ls -q )' # Remove used volumes
+alias docker_stop='docker stop $(docker ps -q)'
+alias docker_clear='docker_stop && docker_rmv && docker_rmc && docker_rmi'
+
 # Bash prompt
 function parse_git_dirty {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
