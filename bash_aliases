@@ -46,13 +46,36 @@ alias docker_stop='docker stop $(docker ps -q)'
 alias docker_clear='docker_stop && docker_rmv && docker_rmc && docker_rmi'
 
 # Bash prompt
-function parse_git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
+function parse_git_branch {
+  git rev-parse --git-dir &> /dev/null
+  git_status="$(git status 2> /dev/null)"
+  branch_pattern="^On branch ([^${IFS}]*)"
+  ahead_pattern="Your branch is ahead of"
+  behind_pattern="Your branch is behind"
+  staged_pattern="Changes to be committed"
+  unstaged_pattern="Changes not staged for commit"
+  untracked_pattern="Untracked files"
+  diverge_pattern="Your branch and (.*) have diverged"
+
+  if [[ ${git_status}} =~ ${staged_pattern} ]];     then state+="${YELLOW}*"; fi
+  if [[ ${git_status}} =~ ${unstaged_pattern} ]];   then state+="${GREEN}*"; fi
+  if [[ ${git_status}} =~ ${untracked_pattern} ]];  then state+="${CYAN}*"; fi
+
+  if   [[ ${git_status} =~ ${ahead_pattern} ]];     then remote="${CYAN}↑"
+  elif [[ ${git_status} =~ ${behind_pattern} ]];    then remote="${CYAN}↓"
+  elif [[ ${git_status} =~ ${diverge_pattern} ]];   then remote="${RED}↕"; fi
+
+  if [[ ${git_status} =~ ${branch_pattern} ]]; then
+    branch=${BASH_REMATCH[1]}
+    echo "$YELLOW:$branch$remote$state"
+  fi
 }
 
-function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(parse_git_dirty))/"
+function prompt_func() {
+  PS1="$RED\$(date +%H:%M) \w$(parse_git_branch)$YELLOW\$ $NO_COLOUR"
 }
+
+PROMPT_COMMAND=prompt_func
 
 CYAN="\[\033[0;36m\]"
 PURPLE="\[\033[0;35m\]"
@@ -61,8 +84,6 @@ YELLOW="\[\033[0;33m\]"
 BLUE="\[\033[0;34m\]"
 GREEN="\[\033[0;32m\]"
 NO_COLOUR="\[\033[0m\]"
-
-PS1="$RED\$(date +%H:%M) \w$YELLOW\$(parse_git_branch)\$ $NO_COLOUR"
 
 # 256 Colour Stuff for Vim/ Tmux
 export TERM='screen-256color'
