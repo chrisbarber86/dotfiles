@@ -32,6 +32,8 @@ Bundle 'leafgarland/typescript-vim'
 Bundle 'SirVer/ultisnips'
 " Snippets
 Bundle 'honza/vim-snippets'
+" Rubocop
+Bundle 'ngmy/vim-rubocop'
 
 " Bundles I don't think I'm actually using:
 "
