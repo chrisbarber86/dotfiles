@@ -44,7 +44,8 @@ alias docker_stop='docker stop $(docker ps -q)'
 alias docker_clear='docker_stop && docker_rmv && docker_rmc && docker_rmi'
 
 # Peppermint
-alias mint='ssh developer@localhost -p 2281'
+# alias mint='ssh developer@localhost -p 2281'
+alias mint='ssh developer@$PEPPERMINT_IP'
 
 # Bash prompt
 function parse_git_branch {
