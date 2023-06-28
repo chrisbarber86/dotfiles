@@ -1,6 +1,8 @@
 [core]
   autocrlt = input
   safecrlt = true
+	autocrlf = false
+	filemode = false
 [alias]
   co = checkout
   ci = commit
@@ -33,7 +35,7 @@
   default = current
 [difftool "sourcetree"]
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path = 
+  path =
 [mergetool "sourcetree"]
   cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
   trustExitCode = true
@@ -50,3 +52,15 @@
 	prompt = false
 [merge]
 	tool = Kaleidoscope
+[commit]
+	gpgsign = true
+[user]
+	singingkey = 13D824A11F13BBB4
+	signingkey = 103967E37DA14CA204DAA7DF13D824A11F13BBB4
+	name = Chris Barber
+	email = chris.barber@sage.com
+[pull]
+	rebase = false
+[rerere]
+	enabled = true
+	autoupdate = true

@@ -1,8 +1,6 @@
 # Bash Aliases File - Heavily based on same file github.com/damian/dotfiles/
 
 # Navigation
-alias ll="ls -l"
-alias lla="ls -la"
 alias ..="cd .."
 alias ...="cd ../.."
 
@@ -14,27 +12,18 @@ alias dev="dev"
 alias rl="source ~/.bash_aliases"
 
 # Git
-alias g="git"
 alias gs="git status "
-alias ga="git add "
-alias gb="git branch "
-alias gc="git commit "
-alias gd="git diff "
-alias go="git checkout "
 alias undo="git reset --soft HEAD~1"
 
 # Bundler
 alias b="bundle"
 alias be="bundle exec "
 
-# Evergreen - https://github.com/abepetrillo/evergreen
-alias evergreen="be rails s -p 4000"
-
 # Python SimpleHTTPServer
 alias simple="python -m SimpleHTTPServer"
 
 # AWS Login
-alias awslogin="$(aws ecr get-login)"
+alias awslogin="aws ecr get-login-password --region eu-west-1 --profile dev | docker login --username AWS --password-stdin 522104923602.dkr.ecr.eu-west-1.amazonaws.com"
 
 # Docker Setup
 alias docker_rmi='docker rmi -f $(docker images -q -a -f dangling=true)' # Remo$
@@ -42,10 +31,6 @@ alias docker_rmc='docker rm $(docker ps -a -q)' # Remove all containers
 alias docker_rmv='docker volume rm $(docker volume ls -q )' # Remove used volumes
 alias docker_stop='docker stop $(docker ps -q)'
 alias docker_clear='docker_stop && docker_rmv && docker_rmc && docker_rmi'
-
-# Peppermint
-# alias mint='ssh developer@localhost -p 2281'
-alias mint='ssh developer@$PEPPERMINT_IP'
 
 # Bash prompt
 function parse_git_branch {
