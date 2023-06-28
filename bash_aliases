@@ -26,11 +26,11 @@ alias simple="python -m SimpleHTTPServer"
 alias awslogin="aws ecr get-login-password --region eu-west-1 --profile dev | docker login --username AWS --password-stdin 522104923602.dkr.ecr.eu-west-1.amazonaws.com"
 
 # Docker Setup
-alias docker_rmi='docker rmi -f $(docker images -q -a -f dangling=true)' # Remo$
+alias docker_rmi='docker rmi $(docker images -q)' # Remove all docker images
 alias docker_rmc='docker rm $(docker ps -a -q)' # Remove all containers
-alias docker_rmv='docker volume rm $(docker volume ls -q )' # Remove used volumes
+alias docker_rmd='docker volume rm $(docker volume ls -q )' # Remove used volumes
 alias docker_stop='docker stop $(docker ps -q)'
-alias docker_clear='docker_stop && docker_rmv && docker_rmc && docker_rmi'
+alias docker_clear='docker_stop && docker_rmd && docker_rmc && docker_rmi'
 
 # Bash prompt
 function parse_git_branch {
