@@ -31,9 +31,6 @@ ln -nfs ~/dotfiles/gitignore ~/.gitignore
 
 # Symlink .gemrc
 ln -nfs ~/dotfiles/gemrc ~/.gemrc
-
-# Symlink .tmux.conf
-ln -nfs ~/dotfiles/tmux.conf ~/.tmux.conf
 ```
 
 ## Install all bundles using vundle:
