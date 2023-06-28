@@ -1,5 +1,8 @@
 # Bash Aliases File - Heavily based on same file github.com/damian/dotfiles/
 
+# https://www.addictivetips.com/mac-os/hide-default-interactive-shell-is-now-zsh-in-terminal-on-macos/
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 # Navigation
 alias ..="cd .."
 alias ...="cd ../.."
