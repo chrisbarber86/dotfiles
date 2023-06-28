@@ -1,0 +1,49 @@
+export PATH=/usr/local/bin:$PATH
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
+# https://www.addictivetips.com/mac-os/hide-default-interactive-shell-is-now-zsh-in-terminal-on-macos/
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+if [ -f ~/.bash_aliases ]; then
+  . ~/.bash_aliases
+fi
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+. $(brew --prefix)/etc/bash_completion
+fi
+
+HISTFILESIZE=100000
+
+#export BUNDLE_SAGEONEGEMS__JFROG__IO=s1-dev-accounting:
+export BUNDLE_SAGEONEGEMS__JFROG__IO=sageone:
+export BUNDLE_GEMS__RAILSLTS__COM=sage_2020:
+
+export ARTIFACTORY_NPM_TOKEN=
+
+export CACHE_STORE_HOST="redis"
+export MQ_ENDPOINT="rabbitmq"
+
+export NUGET_JFROG_PASSWORD=
+
+export MYSQL_USERNAME='root'
+export MYSQL_PASSWORD='admin'
+
+export GITHUB_TOKEN=
+export POSTMARK_TOKEN=
+
+export GPG_TTY=$(tty)
+# https://gist.github.com/sindresorhus/98add7be608fad6b5376a895e5a59972
+# if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
+#   source ~/.gnupg/.gpg-agent-info
+#   export GPG_AGENT_INFO
+# else
+#   eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
+# fi
+#export PATH="/usr/local/opt/node@6/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+
+source /Users/chris.barber/.docker/init-bash.sh || true # Added by Docker Desktop
